@@ -12,7 +12,7 @@ model Emp {
   emp_email String  @unique
   emp_name  String?
   emp_pwd String?
-  ticket Ticket[]
+  empTicket Ticket[]
 }
 
 model Status {
@@ -20,23 +20,23 @@ model Status {
   title String?
   level Int
   priority String?
-  ticket Ticket[]
+  ticketStatus Ticket[]
 }
 
 model Client {
   client_id Int  @id @default(autoincrement()) 
   name String?
   email String?
-  ticket Ticket[]
+  clientTicket Ticket[]
 }
 
 model Ticket {
   ticket_id Int     @id @default(autoincrement())
   title String?
-  emp   Emp @relation(fields: [emp_id], references: [emp_id])
+  empTicket   Emp @relation(fields: [emp_id], references: [emp_id])
   emp_id Int
-  status   Status @relation(fields: [status_id], references: [status_id])
+  ticketStatus   Status @relation(fields: [status_id], references: [status_id])
   status_id Int
-  client   Client @relation(fields: [client_id], references: [client_id])
+  clientTicket   Client @relation(fields: [client_id], references: [client_id])
   client_id Int
 }

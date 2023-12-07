@@ -9,13 +9,22 @@ app.use(express.json())
 app.post(`/signup`, async (req, res) => {
   const { emp_name, emp_email, emp_pwd } = req.body
 
-  const result = await prisma.emp.create({
-    data: {
-      emp_name,
-      emp_email,
-      emp_pwd
-    },
-  })
+  let result = []
+  try {
+    result = await prisma.emp.create({
+      data: {
+        emp_name,
+        emp_email,
+        emp_pwd
+      },
+    })
+  } catch (error) {
+    if(error?.name === "PrismaClientValidationError") {
+      result = [{'error': 'Invalid Input provided to the API'}]
+    } else {
+      result = [{'error': JSON.stringify(error)}]
+    }
+  }
   res.json(result)
 })
 
