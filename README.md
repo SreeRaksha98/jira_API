@@ -50,7 +50,7 @@ npm run dev
 
 The server is now running on `http://localhost:3000`. You can send the API requests implemented in `index.js`, e.g. [`http://localhost:3000/feed`](http://localhost:3000/feed).
 
-### Documentation for Swagger
+### 4. Documentation for Swagger
 execute below command after every API creation to make the documentation
 ```
 npm run swagger
