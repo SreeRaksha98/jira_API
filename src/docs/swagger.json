@@ -1,0 +1,69 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Jira API",
+    "description": "API documentation",
+    "contact": {
+      "name": "Sreeraksha M R"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Jira API,  which provides facilities for sign up, sign in, create ticket, create client"
+    },
+    {
+      "url": "https://localhost:3000",
+      "description": "Jira API,  which provides facilities for sign up, sign in, create ticket, create client"
+    }
+  ],
+  "tags": [
+    {
+      "name": "default",
+      "description": "My Api Documentations"
+    }
+  ],
+  "paths": {
+    "/signup": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "emp_name": {
+                    "example": "any"
+                  },
+                  "emp_email": {
+                    "example": "any"
+                  },
+                  "emp_pwd": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "emp_name": {
+        "example": {
+          "type": "string",
+          "default": "ankith"
+        }
+      }
+    }
+  }
+}
