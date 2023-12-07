@@ -12,11 +12,11 @@ const doc = {
   servers: [
         {
             url: 'http://localhost:3000',              // by default: 'http://localhost:3000'
-            description: 'Jira API,  which provides facilities for sign up, sign in, create ticket, create client'       // by default: ''
+            description: ': Jira API,  which provides facilities for sign up, sign in, create ticket, create client'       // by default: ''
         },
         {
             url: 'https://localhost:3000',              // by default: 'http://localhost:3000'
-            description: 'Jira API,  which provides facilities for sign up, sign in, create ticket, create client'       // by default: ''
+            description: ': Jira API,  which provides facilities for sign up, sign in, create ticket, create client'       // by default: ''
         }
     ],
     tags: [                   // by default: empty Array
@@ -25,16 +25,6 @@ const doc = {
             description: 'My Api Documentations'       // Tag description
         }
     ],
-    components: {
-        parameters: {
-            emp_name: {
-                example: {
-                    type: "string",
-                    default: "ankith"
-                }
-            }
-        }
-    },
     host: 'localhost:3000'
 };
 
