@@ -50,6 +50,15 @@ npm run dev
 
 The server is now running on `http://localhost:3000`. You can send the API requests implemented in `index.js`, e.g. [`http://localhost:3000/feed`](http://localhost:3000/feed).
 
+### 4. Documentation for Swagger
+execute below command after every API creation to make the documentation
+```
+npm run swagger
+```
+
+<img width="1791" alt="image" src="https://github.com/SreeRaksha98/jira_API/assets/67680823/c3884559-a41a-4d8f-bd2d-378924f32e72">
+
+
 ## Using the REST API
 
 You can access the REST API of the server using the following endpoints:
